@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    padding: 2% 7%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #ccc;
+    padding: 20px;
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+header .line {
+    background-color: black;
+    width: 100%;
+    height: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 2%;
+}
+
+.selects {
+    width: 100%;
+}
+
+.selects select {
+    width: 90%;
+    height: 40px;
+}
+
+.radios {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.checkBoxes {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+}
+.title input {
+    width: 90%;
+    height: 40px;
+    padding: 0 20px;
+}
+
+.msg { 
+    width: 100%;
+}
+
+.msg textarea {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    gap: 20px;
+}
+
+.btns input {
+    background-color: #0084ff;
+    width: 90px;
+    height: 25px;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 2px 2px 2px #000;
+}
+
+.btns a {
+    background-color: #ccc;
+    box-shadow: 2px 2px 2px 2px #000;
+    color: #000;
+    width: 90px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
