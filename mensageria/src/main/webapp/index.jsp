@@ -21,56 +21,59 @@
 </head>
 
 <body>
-	<c:if test="${falha}">
-		<div class="alert alert-danger" role="alert">Preencha
-			corretamente todos os dados</div>
-	</c:if>
-	
-	<header>
-		<h1>Serviço de Mensageria</h1>
-		<div class="line"></div>
-		<p>Formulário para envio de emails</p>
-	</header>
+	<main>
+		<c:if test="${falha}">
+			<div class="alert alert-danger" role="alert">Preencha
+				corretamente todos os dados</div>
+		</c:if>
 
-	<form action="sendMsg" method="post">
-		<div class="selects">
-			<label for="mailSelect">E-mail:</label> <select id="mailSelect"
-				name="dest">
-				<c:forEach items="${email}" var="email">
-					<option value="${email}">${email}</option>
-				</c:forEach>
-			</select>
-		</div>
+		<header>
+			<h1>Serviço de Mensageria</h1>
+			<div class="line"></div>
+			<p>Formulário para envio de emails</p>
+		</header>
 
-		<div class="radios">
-			<div class="left">
-				<input type="radio" name="mailType" id="check1" value="f"> <label
-					for="check1">Cumprimento formal</label>
+		<form action="sendMsg" method="post">
+			<div class="selects">
+				<label for="mailSelect">E-mail:</label> <select id="mailSelect"
+					name="dest">
+					<c:forEach items="${email}" var="email">
+						<option value="${email}">${email}</option>
+					</c:forEach>
+				</select>
 			</div>
-			<div class="right">
-				<input type="radio" name="mailType" id="check2" value="h"> <label
-					for="check2">Cumprimento conforme horário</label>
+
+			<div class="radios">
+				<div class="left">
+					<input type="radio" name="mailType" id="check1" value="f">
+					<label for="check1">Cumprimento formal</label>
+				</div>
+				<div class="right">
+					<input type="radio" name="mailType" id="check2" value="h">
+					<label for="check2">Cumprimento conforme horário</label>
+				</div>
 			</div>
-		</div>
 
-		<div class="checkBoxes">
-			<input type="checkbox" id="checkBox" name="auto" value="t"> <label
-				for="checkBox">Incluir aviso de "E-mail automatico"</label>
-		</div>
+			<div class="checkBoxes">
+				<input type="checkbox" id="checkBox" name="auto" value="t">
+				<label for="checkBox">Incluir aviso de "E-mail automatico"</label>
+			</div>
 
-		<div class="title">
-			<label for="title">Título:</label> <input id="title" name="title"
-				type="text">
-		</div>
+			<div class="title">
+				<label for="title">Título:</label> <input value="${params.titulo}"
+					id="title" name="title" type="text">
+			</div>
 
-		<div class="msg">
-			<label for="msg">Texto:</label>
-			<textarea id="msg" name="msg" style="resize: none;"></textarea>
-		</div>
+			<div class="msg">
+				<label for="msg">Texto:</label>
+				<textarea id="msg" name="msg"
+					style="resize: none;"></textarea>
+			</div>
 
-		<div class="btns">
-			<input type="submit" value="Enviar" /> <a href="#">Voltar</a>
-		</div>
-	</form>
+			<div class="btns">
+				<input type="submit" value="Enviar" />
+			</div>
+		</form>
+	</main>
 </body>
 </html>
