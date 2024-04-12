@@ -70,7 +70,6 @@ public class MsgServlet extends HttpServlet {
 			for (int i = 0; i < emails.length; i++) {
 				emails[i] = "usuario" + (i + 1) + "@email.com";
 			}
-
 			req.setAttribute("falha", true);
 			req.setAttribute("email", emails);
 			req.getRequestDispatcher("index.jsp").forward(req, resp);
